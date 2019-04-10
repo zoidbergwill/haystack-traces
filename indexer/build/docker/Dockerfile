@@ -18,6 +18,7 @@ COPY build/docker/jmxtrans-agent.xml ${APP_HOME}/
 
 RUN chmod +x ${APP_HOME}/start-app.sh
 ADD https://github.com/jmxtrans/jmxtrans-agent/releases/download/${JMXTRANS_AGENT}/${JMXTRANS_AGENT}.jar ${APP_HOME}/
+RUN chmod a+r ${APP_HOME}/${JMXTRANS_AGENT}.jar
 
 WORKDIR ${APP_HOME}
 

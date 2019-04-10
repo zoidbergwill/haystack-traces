@@ -22,6 +22,7 @@ RUN GRPC_HEALTH_PROBE_VERSION=v0.2.0 && \
 
 COPY build/docker/jmxtrans-agent.xml ${APP_HOME}/
 ADD https://github.com/jmxtrans/jmxtrans-agent/releases/download/${JMXTRANS_AGENT}/${JMXTRANS_AGENT}.jar ${APP_HOME}/
+RUN chmod a+r ${APP_HOME}/${JMXTRANS_AGENT}.jar
 
 WORKDIR ${APP_HOME}
 
