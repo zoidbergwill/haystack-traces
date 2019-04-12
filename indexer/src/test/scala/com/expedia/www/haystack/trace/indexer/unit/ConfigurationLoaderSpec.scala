@@ -29,7 +29,7 @@ class ConfigurationLoaderSpec extends FunSpec with Matchers {
   describe("Configuration loader") {
 
     it("should load the health status config from base.conf") {
-      project.healthStatusFilePath shouldEqual "/app/isHealthy"
+      project.healthStatusFilePath shouldEqual "/tmp/isHealthy"
     }
 
     it("should load the span buffer config only from base.conf") {

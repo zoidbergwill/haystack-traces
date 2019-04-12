@@ -83,7 +83,7 @@ spec:
             command:
             - grep
             - "true"
-            - /app/isHealthy
+            - /tmp/isHealthy
           initialDelaySeconds: 30
           periodSeconds: 5
           timeoutSeconds: 5
